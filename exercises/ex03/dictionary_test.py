@@ -60,16 +60,21 @@ def test_count3():
     assert count([]) == {}
 
 
-def bin_lin():
+def test_bin_lin():
     """Testing the use case of the function."""
     assert bin_len(["the", "quick", "fox"]) == {3: {"the", "fox"}, 5: {"quick"}}
 
 
-def bin_lin2():
+def test_bin_lin2():
     """Testing the use case of the function."""
     assert bin_len(["the", "the", "fox"]) == {3: {"the", "fox"}}
 
 
-def bin_lin3():
+def test_bin_lin3():
+    """Testing the use case of the function."""
+    assert bin_len(["we", "we", "love"]) == {3: {"we", "love"}}
+
+
+def test_bin_lin4():
     """Testing the edge case of the function."""
     assert bin_len([]) == {}
